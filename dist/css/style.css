@@ -129,3 +129,23 @@ li a {
   grid-area: 3/1/4/3;
   padding: 10px 0;
 }
+
+@media only screen and (max-width: 660px) {
+  .wrapper {
+    max-width: 375px;
+  }
+  .wrapper__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .subscription {
+    border-bottom-left-radius: 0;
+  }
+
+  .description {
+    border-bottom-left-radius: 20px;
+  }
+}
