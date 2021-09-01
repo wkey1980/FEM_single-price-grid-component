@@ -34,8 +34,6 @@ li a {
 	max-width: 1440px;
 	height: 100vh;
 	margin: 0 auto;
-	// background-color: teal;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -50,15 +48,17 @@ li a {
 		height: 100%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: 1fr 1fr min-content;
+		grid-template-rows: 0.8fr 1.2fr min-content;
 	}
 }
 
-// .container {
-// 	display: flex;
-// 	flex-direction: column;
-// padding: 70px;
-// }
+.join,
+.subscription,
+.description {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
 
 .join {
 	grid-area: 1 / 1 / 2 / 3;
@@ -69,20 +69,21 @@ li a {
 	width: 100%;
 	height: 100%;
 
+	justify-content: center;
+
 	&__title {
 		color: hsl(178, 52%, 45%);
-		// padding-bottom: 30px;
+		padding-bottom: 15px;
 	}
 
 	&__subtitle {
 		color: hsl(71, 73%, 54%);
-		// padding-bottom: 30px;
+		padding-bottom: 15px;
 	}
 
 	&__description {
 		color: hsl(225, 10%, 76%);
-		// max-width: 700px;
-		// line-height: 1.6;
+		line-height: 1.6;
 	}
 }
 
@@ -90,8 +91,7 @@ li a {
 	grid-area: 2 / 1 / 3 / 2;
 	background-color: hsl(179, 61%, 44%);
 	border-bottom-left-radius: 20px;
-	justify-content: flex-start;
-	align-items: flex-start;
+	justify-content: space-around;
 
 	width: 100%;
 	height: 100%;
@@ -102,6 +102,8 @@ li a {
 
 	&__price {
 		color: white;
+		font-size: 24px;
+		font-weight: bold;
 	}
 
 	&__per-month {
@@ -113,9 +115,15 @@ li a {
 	}
 
 	&__cta {
-		background-color: hsl(71, 73%, 54%);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 240px;
+		height: 45px;
+		border-radius: 5px;
 		color: white;
-		width: 75%;
+		background-color: hsl(71, 73%, 54%);
+		text-decoration: none;
 	}
 }
 
@@ -162,9 +170,5 @@ li a {
 
 
 
-.subscription,
-.description {
-	justify-content: flex-start;
-	align-items: flex-start;
-}
+
 
